@@ -13,13 +13,13 @@ function App() {
         <header>
         <h1>Friends</h1>
         <nav>
-          <div class="navLink">
+          <div className="navLink">
             <Link to="/login">Login</Link>
           </div>
-          <div class="navLink">
+          <div className="navLink">
             <Link to="/friends">My Friends</Link>
           </div>
-          <div class="navLink">
+          <div className="navLink">
             <Link to="/add">Add Friend</Link>
           </div>
         </nav>

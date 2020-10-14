@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 
 const Login = () => {
@@ -15,6 +16,18 @@ const Login = () => {
 
     const login = e => {
         e.preventDefault();
+        const credentialsJSON = JSON.stringify(credentials); 
+        console.log("Credentials sent: ", credentialsJSON);
+        axios
+            .post('http://localhost:5000/api/login', credentialsJSON)
+            .then(res=>{
+                console.log(res.data)
+                return res.data;
+            })
+            .catch(err => {
+                console.log("API: Credentials Post error: ", err);
+                return err;
+            })
     };
 
 
