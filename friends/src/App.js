@@ -4,6 +4,7 @@ import FriendsList from './Components/FriendsList';
 import Login from './Components/Login';
 import AddFriend from './Components/AddFriend';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import LoadingAnimation from './Components/Loading';
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           </div>
         </nav>
         </header>
-        
+        {/* <LoadingAnimation /> */}
         <div className="contentWrapper">
           {/* <FriendsList />
           <Login />
