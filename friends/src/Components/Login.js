@@ -16,10 +16,10 @@ const Login = () => {
 
     const login = e => {
         e.preventDefault();
-        const credentialsJSON = JSON.stringify(credentials); 
-        console.log("Credentials sent: ", credentialsJSON);
+        // const credentialsJSON = JSON.stringify(credentials); 
+        console.log("Credentials sent: ", credentials);
         axios
-            .post('http://localhost:5000/api/login', credentialsJSON)
+            .post('http://localhost:5000/api/login', credentials)
             .then(res=>{
                 console.log(res.data)
                 return res.data;
