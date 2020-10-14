@@ -7,7 +7,7 @@ const data = fakeResponse.data.friends;
 const FriendsList = () => {
     return(
         <div className="FriendsList">
-            <h2>Friends List:</h2>
+            <h2>My Friends:</h2>
             {data.map((item)=>{
                 return(<Friend 
                     friend={item}
