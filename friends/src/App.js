@@ -10,9 +10,9 @@ function App() {
       <header>
       <h1>Friends</h1>
       <nav>
-        <div class="navLink"><a href="">Home</a></div>
-        <div class="navLink"><a href="">About</a></div>
-        <div class="navLink"><a href="">Contact</a></div>
+        <div class="navLink"><a href=""></a></div>
+        <div class="navLink"><a href=""></a></div>
+        <div class="navLink"><a href=""></a></div>
       </nav>
       </header>
       

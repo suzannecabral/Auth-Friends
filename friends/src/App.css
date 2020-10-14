@@ -175,16 +175,22 @@ button {
   font-weight:normal;
 }
 
+
 /*Light*/
 nav {
   color:#fff;
   background-color:#58a5f0;
 }
+
+button:hover{
+  background-color:#58a5f0;
+}
+
 nav div {
   text-transform:uppercase;
   font-weight: bold;
   font-size:1.6rem;
-  padding:2rem 3rem 1.3rem 0;
+  padding:2rem 3rem 1rem 0;
   text-align:center;
   width:8rem;
   border-bottom:4px solid #58a5f0;
