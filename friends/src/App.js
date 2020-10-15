@@ -4,6 +4,8 @@ import FriendsList from './Components/FriendsList';
 import Login from './Components/Login';
 import AddFriend from './Components/AddFriend';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import PrivateRoute from './api/PrivateRoute';
+
 // import LoadingAnimation from './Components/Loading';
 
 function App() {
@@ -32,7 +34,8 @@ function App() {
 
           <Switch>
             <Route path="/add" component={AddFriend} />
-            <Route path="/friends" component={FriendsList} />
+            //private route needs to be exact
+            <PrivateRoute exact path="/friends" component={FriendsList} />
             <Route path="/login" component={Login}/>
 
           </Switch>

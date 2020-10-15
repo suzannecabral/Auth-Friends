@@ -315,3 +315,17 @@ Usage:
             transform: scale3D(0, 0, 1);
   } 
 }
+
+/*----------------------------*/
+/* This App's styles          */
+/*----------------------------*/
+
+.Friend {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content:space-between;
+}
+.Friend button {
+  margin-right:.5rem;
+}
+

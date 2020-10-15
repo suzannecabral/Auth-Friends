@@ -9,23 +9,22 @@ const Login = () => {
         password:""
     };
     const [credentials,setCredentials] = useState(initialValues);
-
     const handleChange = e => {
         setCredentials({...credentials,[e.target.name]:e.target.value});
     };
-
     const login = e => {
         e.preventDefault();
         // const credentialsJSON = JSON.stringify(credentials); 
-        console.log("Credentials sent: ", credentials);
+        console.log("Credentials sent");
         axios
             .post('http://localhost:5000/api/login', credentials)
             .then(res=>{
-                console.log(res.data)
-                return res.data;
+                console.log(res.data.payload)
+                localStorage.setItem("token",res.data.payload);
+                return res.data.payload;
             })
             .catch(err => {
-                console.log("API: Credentials Post error: ", err);
+                console.log("Login unsuccessful: ", err);
                 return err;
             })
     };
