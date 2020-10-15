@@ -1,0 +1,317 @@
+/*
+Custom classes:
+  
+  Required:
+  .contentWrapper: aligns items that are beneath the header & nav
+
+  Optional:
+  .card: apply this for elements that stand out from the page
+  
+  Material design color tool:
+  https://material.io/resources/color/#!/?view.left=0&view.right=0
+
+
+*/
+
+
+/*RESET-----------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* End Meyer Reset---------*/
+
+
+/*----------------------------*/
+/* Custom Reset                */
+/*----------------------------*/
+
+html {
+    box-sizing:border-box;
+    font-size:62.5%;
+    /*set font size for rem = px*/
+}
+
+/*----------------------------*/
+/* Base Styles                */
+/*----------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color:#212121;
+  background-color:#f5f5f5;
+} */
+
+html, body {
+  font-family:'Lato', 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  color:#212121;
+  background-color:#f5f5f5;
+  line-height:1.1;
+}
+
+body {
+  font-size:1.7rem;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight:bold;
+}
+
+h1 {
+  font-size:3.5rem;
+  margin-bottom:1.2rem;
+}
+h2 {
+  font-size:2.2rem;
+  margin-bottom:.5rem;
+}
+
+h3, h4, h5, p, email, a {
+  font-size:1.7rem;
+  margin-bottom:.25rem;
+}
+
+a, a:link, a:hover, a:active, a:visited{
+  text-decoration:none;
+}
+/* Form Styling ---------------*/
+
+button, input{
+  border-radius:7px;
+  padding:.7rem 1.4rem;
+  font-size:1.7rem;
+}
+input{
+  background-color:white;
+  border:1px solid #cfcfcf;
+  display:block;
+  margin-bottom:1rem;
+}
+input::placeholder {
+  color: #9e9e9e;
+}
+button{
+  font-weight:bold;
+  background-color:#000;
+  color:#fff;
+  border:none;
+  margin-bottom:2rem;
+}
+
+/* Cards ---------------------*/
+
+.card {
+  background-color:#fff;
+  border-radius:7px;
+  filter: drop-shadow(0px 2px 2px #cfcfcf);
+  margin-bottom:1rem;
+  margin-right:1rem;
+  padding:1.4rem;
+  max-width:42rem;
+}
+
+
+/* Colors (Material Design) ----------*/
+
+/*Dark*/
+header {
+  color:#fff;
+  background-color:#004c8c;
+}
+
+/*Primary*/
+button {
+  color:#fff;
+  background-color:#0277bd;
+  cursor:pointer;
+  font-weight:normal;
+}
+
+
+/*Light*/
+nav {
+  color:#fff;
+  background-color:#58a5f0;
+}
+
+button:hover{
+  background-color:#58a5f0;
+}
+
+/* nav styling ----------*/
+
+nav div {
+  text-transform:uppercase;
+  font-weight: bold;
+  font-size:1.5rem;
+  padding:2rem 3rem 1rem 0;
+  text-align:center;
+  border-bottom:4px solid #58a5f0;
+}
+nav a{
+  color:#fff;
+  display:block;
+}
+
+nav div:hover{
+  border-bottom:4px solid white;
+}
+/* alignment ----------*/
+
+.contentWrapper {
+  /* width:80%; */
+  /* margin:3rem auto; */
+  padding-left:3rem;
+}
+
+header {
+  padding-top:2.5rem;
+}
+header h1, nav{
+  padding-left:3rem;
+}
+
+nav {
+  display:flex;
+  flex-flow:row wrap;
+  margin-bottom:1.7rem;
+}
+
+/*----------------------------*/
+/* CSS Loading Spinner        */
+/*----------------------------*/
+
+/* From https://tobiasahlin.com/spinkit/  */
+
+/*
+Usage:
+
+<div class="sk-cube-grid">
+  <div class="sk-cube sk-cube1"></div>
+  <div class="sk-cube sk-cube2"></div>
+  <div class="sk-cube sk-cube3"></div>
+  <div class="sk-cube sk-cube4"></div>
+  <div class="sk-cube sk-cube5"></div>
+  <div class="sk-cube sk-cube6"></div>
+  <div class="sk-cube sk-cube7"></div>
+  <div class="sk-cube sk-cube8"></div>
+  <div class="sk-cube sk-cube9"></div>
+</div>
+
+*/
+
+
+
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #0277bd;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+          animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out; 
+}
+.sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s; }
+.sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+.sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s; }
+.sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s; }
+.sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s; }
+.sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s; }
+
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1); 
+  }
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    -webkit-transform: scale3D(1, 1, 1);
+            transform: scale3D(1, 1, 1);
+  } 35% {
+    -webkit-transform: scale3D(0, 0, 1);
+            transform: scale3D(0, 0, 1);
+  } 
+}
